@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Perpus</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <template>
+            <h1>{{ judul }}</h1>
+
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>N0</th>
+                        <th>NAMA</th>
+                        <th>KETERANGAN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(k, i) in kelompok">
+                        <td>{{ i+1 }}</td>
+                        <td>{{ k.nama }}</td>
+                        <td>{{ k.keterangan }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </template>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
